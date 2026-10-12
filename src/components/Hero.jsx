@@ -1,7 +1,7 @@
 import {useRef} from 'react';
 import gsap from 'gsap';
 import useGsap from '../hooks/useGsap';
-import {PHOTOS} from '../data/images';
+import {PHOTOS,unsplash} from '../data/images';
 import Img from './Img';
 import LiquidButton from './LiquidButton';
 export default function Hero(){
@@ -10,12 +10,16 @@ export default function Hero(){
   gsap.timeline({defaults:{ease:'power3.out'}})
    .from('.hero-img',{clipPath:'inset(100% 0 0 0)',duration:1.6,ease:'power4.inOut'})
    .from('.hero-img img',{scale:1.15,duration:2.6},0)
+  .from('.hero-video',{scale:1.08,duration:2.6},0)
    .from('.meta',{opacity:0,y:10,duration:1,stagger:.15},'-=1')
    .from('.hl span',{yPercent:110,duration:1.2,stagger:.2},'-=.9')
    .from('.hero-cta',{opacity:0,y:20,duration:1},'-=.6');
  },r);
  return(<section id="top" ref={r} className="hero">
   <Img className="hero-img" photo={PHOTOS.hero} w={2400} alt="Friends raising glasses of red wine"/>
+  <video className="hero-video" autoPlay muted loop playsInline preload="metadata" poster={unsplash(PHOTOS.hero,2400)} aria-hidden="true">
+   <source src="https://videos.pexels.com/video-files/3129671/3129671-hd_1920_1080_25fps.mp4" type="video/mp4"/>
+  </video>
   <p className="label meta hero-label">A private house of wine</p>
   <h1 className="hl"><div><span>Refined taste,</span></div><div><span><em>at any hour.</em></span></div></h1>
   <div className="hero-foot"><p className="meta label">250 Ogui Road, Enugu<br/>Open daily</p>

@@ -14,6 +14,6 @@ export default function StorySection(){
  },[]);
  return(<section id="story" ref={r} className="story"><div ref={track} className="track">
   {STORY.map(s=>(<article className="panel" key={s.n}><span className="num">{s.n}</span>
-   <div className="pcopy"><p className="label">Wine Cave</p><h2>{s.title}</h2><p>{s.copy}</p></div>
+   <div className="pcopy"><p className="label">Chapter {s.n} <span>/ 04</span></p><h2>{s.title}</h2><p>{s.copy}</p><span className="story-detail">{s.detail}</span></div>
    <Img className="pimg" photo={s.photo} pos={s.pos} w={1400} alt={s.title}/></article>))}</div></section>);
 }
