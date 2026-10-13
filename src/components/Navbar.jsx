@@ -16,7 +16,7 @@ export default function Navbar({openCart,openAuth}){
     const rect=el.getBoundingClientRect();
     return rect.top<=sampleY&&rect.bottom>sampleY;
    });
-   nav.current.dataset.tone=section?.matches('.kinetic, .coll, .gallery, .journal')?'light':'dark';
+   nav.current.dataset.tone=section?.matches('.kinetic, .coll, .gallery')?'light':'dark';
   };
   const scheduleUpdate=()=>{
    if(frame===undefined)frame=requestAnimationFrame(updateTone);

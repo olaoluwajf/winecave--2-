@@ -1,5 +1,5 @@
 import {PHOTOS as P} from './images';
-export const NAV=[['Story','story'],['Collection','collection'],['Gallery','gallery'],['Membership','membership'],['Journal','journal'],['Contact','contact']];
+export const NAV=[['Story','story'],['Collection','collection'],['Gallery','gallery'],['Membership','membership'],['Contact','contact']];
 export const STORY=[
  {n:'01',title:'Begin with a bottle',detail:'For unhurried evenings',copy:'A thoughtful collection for lingering dinners, spirited conversation and the occasions that deserve a little more care.',photo:P.moody,pos:'50% 40%'},
  {n:'02',title:'A place in Enugu',detail:'250 Ogui Road · Enugu',copy:'Step inside, explore the collection and find a new favourite. Wine Cave is a place to make a little more room for the moment.',photo:P.rack,pos:'30% 50%'},
